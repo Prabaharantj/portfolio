@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prabaharan T — Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      style="border-radius: 100%"
+      href="me-circle.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="closeMNav()">About</a>
+      <a href="#skills" onclick="closeMNav()">Skills</a>
+      <a href="#experience" onclick="closeMNav()">Experience</a>
+      <a href="#projects" onclick="closeMNav()">Projects</a>
+      <a href="#education" onclick="closeMNav()">Education</a>
+      <a href="#contact" onclick="closeMNav()" class="mn-cta">Hire Me</a>
+    </div>
+
+    <!-- Nav -->
+    <nav id="navbar">
+      <div class="nav-logo">PS</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-content container">
+        <div class="hero-left">
+          <div class="hero-badge">Available for opportunities</div>
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Prabaharan T</h1>
+          <p class="hero-title">Full Stack · Angular · MERN · MEAN Developer</p>
+          <div class="hero-stack">
+            <span class="stack-chip">Angular</span>
+            <span class="stack-chip">React</span>
+            <span class="stack-chip">Node.js</span>
+            <span class="stack-chip">MongoDB</span>
+            <span class="stack-chip">TypeScript</span>
+          </div>
+          <p class="hero-desc">
+            Build scalable web applications and modern user experiences with
+            clean, efficient code and a passion for continuous learning.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn-primary"
+              ><span>View Projects</span><span>→</span></a
+            >
+            <a
+              href="Prabaharan_T_Full_Stack_Developer_Resume.pdf"
+              download="Prabaharan-Resume.pdf"
+              class="btn-outline"
+            >
+              <span>⬇</span>
+              <span>Resume</span>
+            </a>
+            <a href="#contact" class="btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="photo-wrapper" id="photoWrapper">
+            <div class="photo-ring"></div>
+            <div class="photo-ring-2"></div>
+            <div class="photo-circle">
+              <!-- <span class="photo-initials">PS</span> -->
+              <img src="me.png" alt="" />
+            </div>
+            <div class="floating-icons">
+              <div class="f-icon">⬡</div>
+              <div class="f-icon">◈</div>
+              <div class="f-icon">⟨/⟩</div>
+              <div class="f-icon">⬢</div>
+              <div class="f-icon">◎</div>
+              <div class="f-icon">⌘</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Crafting <span>Digital Experiences</span></h2>
+        <div class="about-grid">
+          <div>
+            <div class="about-glass reveal">
+              <p class="about-text">
+                Motivated Full Stack Developer with
+                <strong>2 years of experience</strong> in developing and
+                maintaining web applications.
+              </p>
+              <p class="about-text">
+                Skilled in Angular, React, JavaScript, TypeScript, HTML, CSS,
+                and SCSS for building responsive and user-friendly interfaces.
+              </p>
+              <p class="about-text">
+                Experienced in backend development using Node.js, Express.js,
+                and MongoDB including REST API integration.
+              </p>
+              <p class="about-text">
+                Passionate about writing clean, efficient code and continuously
+                learning modern technologies to improve performance and user
+                experience.
+              </p>
+            </div>
+            <div class="about-stats reveal" style="transition-delay: 0.15s">
+              <div class="stat-item">
+                <div class="stat-num">2+</div>
+                <div class="stat-label">Years Exp.</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">5+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">10+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-info reveal" style="transition-delay: 0.2s">
+            <div class="info-row">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <strong>Location</strong>Navalur, Chennai, India
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📧</div>
+              <div class="info-text">
+                <strong>Email</strong
+                ><a href="mailto:prabaharan6374@gmail.com"
+                  >prabaharan6374@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📱</div>
+              <div class="info-text"><strong>Phone</strong>+91 8778201109</div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🌐</div>
+              <div class="info-text">
+                <strong>Website</strong
+                ><a href="https://prabaharan.in" target="_blank"
+                  >prabaharan.in</a
+                >
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🎯</div>
+              <div class="info-text">
+                <strong>Specialization</strong>Full Stack · Angular · MERN Stack
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">✅</div>
+              <div class="info-text">
+                <strong>Status</strong
+                ><span style="color: var(--secondary)"
+                  >Open to opportunities</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-label">Technical Skills</div>
+        <h2 class="section-title">My <span>Tech Stack</span></h2>
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">// Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Angular</span
+              ><span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span
+              ><span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML5</span
+              ><span class="skill-tag">CSS3</span>
+              <span class="skill-tag">SCSS</span
+              ><span class="skill-tag">Responsive UI</span>
+            </div>
+          </div>
+          <div class="skill-category reveal" style="transition-delay: 0.1s">
+            <div class="skill-cat-title" style="color: var(--secondary)">
+              // Backend
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag sec">Node.js</span
+              ><span class="skill-tag sec">Express.js</span>
+              <span class="skill-tag sec">REST API</span
+              ><span class="skill-tag sec">API Integration</span>
+            </div>
+          </div>
+          <div class="skill-category reveal" style="transition-delay: 0.2s">
+            <div class="skill-cat-title" style="color: #a78bfa">
+              // Database
+            </div>
+            <div class="skill-tags">
+              <span
+                class="skill-tag"
+                style="
+                  background: rgba(167, 139, 250, 0.08);
+                  border-color: rgba(167, 139, 250, 0.2);
+                "
+                >MongoDB</span
+              >
+            </div>
+          </div>
+          <div class="skill-category reveal" style="transition-delay: 0.3s">
+            <div class="skill-cat-title" style="color: var(--accent)">
+              // Other
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag acc">UI Component Dev</span
+              ><span class="skill-tag acc">Form Validation</span>
+              <span class="skill-tag acc">Problem Solving</span
+              ><span class="skill-tag acc">Deployment</span>
+              <span class="skill-tag acc">Web Hosting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-label">Work History</div>
+        <h2 class="section-title">Professional <span>Experience</span></h2>
+        <div class="timeline">
+          <div class="timeline-item" id="tl1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-role">Angular Developer</div>
+              <div class="timeline-date">November 2024 – Present</div>
+              <p class="timeline-desc">
+                Developing and maintaining modern web applications using
+                Angular, TypeScript, and the latest frontend technologies for
+                government and enterprise platforms.
+              </p>
+              <div class="timeline-projects">
+                <span class="project-pill">ScholarPath</span>
+                <span class="project-pill">WIOA Arkansas Job Portal</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>
+                  Developed web apps using Angular, TypeScript, HTML, CSS &amp;
+                  SCSS
+                </li>
+                <li>
+                  Built responsive user interfaces and reusable component
+                  libraries
+                </li>
+                <li>Integrated REST APIs for seamless backend communication</li>
+                <li>
+                  Implemented form validations and optimized UI performance
+                </li>
+                <li>
+                  Collaborated with backend developers to build scalable
+                  applications
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+          <div class="project-card reveal" onclick="openModal('scholarpath')">
+            <div class="project-header">
+              <div class="project-icon">🎓</div>
+              <div class="project-arrow">↗</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">ScholarPath</h3>
+              <p class="project-desc">
+                A responsive government scholarship management web application
+                built with Angular, featuring reactive forms, reusable
+                components, and full REST API integration.
+              </p>
+              <div class="project-features">
+                <span class="feature-tag">Angular</span
+                ><span class="feature-tag">TypeScript</span>
+                <span class="feature-tag">SCSS</span
+                ><span class="feature-tag">REST API</span>
+                <span class="feature-tag">Reactive Forms</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card reveal"
+            style="transition-delay: 0.1s"
+            onclick="openModal('wioa')"
+          >
+            <div class="project-header">
+              <div class="project-icon">💼</div>
+              <div class="project-arrow">↗</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">WIOA Arkansas Job Portal</h3>
+              <p class="project-desc">
+                A Workforce Innovation and Opportunity Act job portal with
+                dynamic UI components, advanced form validations, and optimized
+                performance for job seekers and employers.
+              </p>
+              <div class="project-features">
+                <span class="feature-tag">Angular</span
+                ><span class="feature-tag">TypeScript</span>
+                <span class="feature-tag">Dynamic UI</span
+                ><span class="feature-tag">API Integration</span>
+                <span class="feature-tag">Performance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">
+          Education &amp; <span>Certifications</span>
+        </h2>
+        <div class="edu-cert-grid">
+          <div>
+            <p class="edu-sub-label">// Education</p>
+            <div class="edu-card reveal">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-degree">B.Tech Information Technology</div>
+              <div class="edu-detail">2020 – 2024</div>
+              <div class="edu-detail" style="color: var(--secondary)">
+                Specialization: Frontend Dev with Angular
+              </div>
+              <div class="edu-gpa">⭐ GPA: 7.5 / 10</div>
+            </div>
+          </div>
+          <div>
+            <p class="edu-sub-label">// Certifications</p>
+            <div class="cert-list">
+              <div class="cert-item reveal">
+                <div class="cert-badge">🏆</div>
+                <div>
+                  <div class="cert-name">Full Stack Web Development</div>
+                  <div class="cert-org">GUVI · 2023</div>
+                </div>
+              </div>
+              <div class="cert-item reveal" style="transition-delay: 0.1s">
+                <div class="cert-badge">🏆</div>
+                <div>
+                  <div class="cert-name">Full Stack Web Development</div>
+                  <div class="cert-org">Makinfratek · 2023</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's <span>Work Together</span></h2>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-intro">
+              I'm currently open to new opportunities. Whether you have a
+              project, a question, or just want to say hi — my inbox is always
+              open!
+            </p>
+            <div class="contact-item">
+              <div class="contact-icon">👤</div>
+              <div class="contact-detail">
+                <span class="contact-label">Name</span
+                ><span class="contact-value">Prabaharan T</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-detail">
+                <span class="contact-label">Location</span
+                ><span class="contact-value">Chennai, India</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span
+                ><span class="contact-value"
+                  ><a href="mailto:prabaharan6374@gmail.com"
+                    >prabaharan6374@gmail.com</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-detail">
+                <span class="contact-label">Phone</span
+                ><span class="contact-value"
+                  ><a href="tel:+918778201109">+91 8778201109</a></span
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div class="contact-detail">
+                <span class="contact-label">Website</span
+                ><span class="contact-value"
+                  ><a href="https://prabaharan.in" target="_blank"
+                    >prabaharan.in</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-form reveal" style="transition-delay: 0.15s">
+            <div class="form-row">
+              <label class="form-label">Name</label
+              ><input
+                type="text"
+                class="form-input"
+                placeholder="Your name"
+                id="name"
+              />
+            </div>
+            <div class="form-row">
+              <label class="form-label">Email</label
+              ><input
+                type="email"
+                class="form-input"
+                placeholder="your@email.com"
+                id="email"
+              />
+            </div>
+            <div class="form-row">
+              <label class="form-label">Message</label
+              ><textarea
+                class="form-textarea"
+                placeholder="Tell me about your project..."
+                id="message"
+              ></textarea>
+            </div>
+            <button class="form-submit" onclick="submitForm(this)">
+              <span>Send Message</span><span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Prabaharan T.</div>
+        <div class="footer-copy">
+          © <span id="year"></span> · Crafted with ♥ in Chennai
+        </div>
+        <div class="footer-socials">
+          <a
+            href="mailto:prabaharan6374@gmail.com"
+            class="social-btn"
+            title="Email"
+            >✉</a
+          >
+          <a
+            href="https://prabaharan.in"
+            target="_blank"
+            class="social-btn"
+            title="Website"
+            >⊕</a
+          >
+          <a href="tel:+918778201109" class="social-btn" title="Phone">☏</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+      <div class="modal" id="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      /* ===== CURSOR ===== */
+      const cursor = document.getElementById("cursor");
+      const follower = document.getElementById("cursorFollower");
+      let mx = 0,
+        my = 0,
+        fx = 0,
+        fy = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        cursor.style.transform = `translate(${mx - 6}px,${my - 6}px)`;
+      });
+      (function af() {
+        fx += (mx - fx) * 0.12;
+        fy += (my - fy) * 0.12;
+        follower.style.transform = `translate(${fx - 20}px,${fy - 20}px)`;
+        requestAnimationFrame(af);
+      })();
+      document
+        .querySelectorAll("a,button,.project-card,.skill-tag")
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            follower.style.width = "60px";
+            follower.style.height = "60px";
+          });
+          el.addEventListener("mouseleave", () => {
+            follower.style.width = "40px";
+            follower.style.height = "40px";
+          });
+        });
+
+      /* ===== MOBILE NAV ===== */
+      function toggleMNav() {
+        const n = document.getElementById("mobileNav");
+        const h = document.getElementById("hamburger");
+        n.classList.toggle("open");
+        h.classList.toggle("open");
+        document.body.style.overflow = n.classList.contains("open")
+          ? "hidden"
+          : "";
+      }
+      function closeMNav() {
+        document.getElementById("mobileNav").classList.remove("open");
+        document.getElementById("hamburger").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      /* ===== NAV SCROLL ===== */
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      /* ===== PARTICLES ===== */
+      const canvas = document.getElementById("particles-canvas");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+      function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 1.5 + 0.3;
+          this.sx = (Math.random() - 0.5) * 0.3;
+          this.sy = (Math.random() - 0.5) * 0.3;
+          this.opacity = Math.random() * 0.5 + 0.1;
+          this.color = Math.random() > 0.5 ? "99,102,241" : "6,182,212";
+        }
+        update() {
+          this.x += this.sx;
+          this.y += this.sy;
+          if (
+            this.x < 0 ||
+            this.x > canvas.width ||
+            this.y < 0 ||
+            this.y > canvas.height
+          )
+            this.reset();
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
+          ctx.fill();
+        }
+      }
+      for (let i = 0; i < 100; i++) particles.push(new Particle());
+      function drawLinks() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(99,102,241,${0.07 * (1 - d / 100)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+      }
+      (function animP() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+        drawLinks();
+        requestAnimationFrame(animP);
+      })();
+
+      /* ===== HERO PARALLAX (desktop only) ===== */
+      let mouseX = 0,
+        mouseY = 0;
+      document.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+      const pw = document.getElementById("photoWrapper");
+      (function hP() {
+        if (pw) {
+          if (window.innerWidth > 900) {
+            pw.style.transform = `translate(${mouseX * 10}px,${mouseY * 10}px)`;
+          } else {
+            pw.style.transform = "none";
+          }
+        }
+        requestAnimationFrame(hP);
+      })();
+
+      /* ===== SCROLL REVEAL ===== */
+      const revObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => revObs.observe(el));
+
+      /* ===== TIMELINE ===== */
+      const tlObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.style.opacity = "1";
+              e.target.style.transform = "translateX(0)";
+              e.target.style.transition =
+                "opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)";
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".timeline-item")
+        .forEach((el) => tlObs.observe(el));
+
+      /* ===== GSAP ===== */
+      if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline({ delay: 0.1 });
+        tl.from(".hero-badge", { opacity: 0, y: 20, duration: 0.7 })
+          .from(".hero-greeting", { opacity: 0, y: 25, duration: 0.7 }, "-=.4")
+          .from(
+            ".hero-name",
+            { opacity: 0, y: 40, duration: 0.85, ease: "power3.out" },
+            "-=.4",
+          )
+          .from(".hero-title", { opacity: 0, y: 20, duration: 0.6 }, "-=.3")
+          .from(".hero-stack", { opacity: 0, y: 20, duration: 0.6 }, "-=.3")
+          .from(".hero-desc", { opacity: 0, y: 20, duration: 0.6 }, "-=.3")
+          .from(".hero-btns", { opacity: 0, y: 20, duration: 0.6 }, "-=.3");
+        gsap.from(".photo-wrapper", {
+          opacity: 0,
+          scale: 0.8,
+          duration: 1,
+          delay: 0.5,
+          ease: "back.out(1.5)",
+        });
+        gsap.to(".hero-bg", {
+          yPercent: 30,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
+        gsap.utils.toArray(".section-title").forEach((el) => {
+          gsap.from(el, {
+            opacity: 0,
+            y: 50,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
+      }
+
+      /* ===== 3D TILT ===== */
+      document
+        .querySelectorAll(".skill-category,.project-card")
+        .forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            if (window.innerWidth < 900) return;
+            const r = card.getBoundingClientRect();
+            const x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            const y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+          });
+        });
+
+      /* ===== MODAL ===== */
+      const projectData = {
+        scholarpath: {
+          title: "ScholarPath Web Application",
+          desc: "A comprehensive government-backed scholarship management platform built with Angular. Designed for students to explore, apply, and track scholarship opportunities with a seamless user experience.",
+          features: [
+            "Reactive forms with real-time validation",
+            "Reusable UI component library",
+            "REST API integration for data retrieval",
+            "Responsive design for all devices",
+            "Angular routing and lazy loading",
+            "SCSS-based theming and design system",
+          ],
+        },
+        wioa: {
+          title: "WIOA Arkansas Job Portal",
+          desc: "A Workforce Innovation and Opportunity Act compliant job portal platform serving job seekers and employers in Arkansas. Built with Angular for a dynamic, accessible, and high-performance experience.",
+          features: [
+            "Dynamic UI components with Angular CDK",
+            "REST API integration with backend services",
+            "Advanced form validations and error handling",
+            "Performance optimizations (lazy loading, change detection)",
+            "Accessible and WCAG-compliant design",
+            "Multi-step workflows and state management",
+          ],
+        },
+      };
+      function openModal(key) {
+        const p = projectData[key];
+        document.getElementById("modal-body").innerHTML =
+          `<div class="modal-title">${p.title}</div>` +
+          `<div class="modal-desc">${p.desc}</div>` +
+          `<div class="modal-features">${p.features.map((f) => `<div class="modal-feature">${f}</div>`).join("")}</div>`;
+        document.getElementById("modal-overlay").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal(e) {
+        if (
+          !e ||
+          e.target === document.getElementById("modal-overlay") ||
+          (e.target && e.target.classList.contains("modal-close"))
+        ) {
+          document.getElementById("modal-overlay").classList.remove("active");
+          document.body.style.overflow = "";
+        }
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape")
+          closeModal({ target: document.getElementById("modal-overlay") });
+      });
+
+      /* ===== FORM ===== */
+      function submitForm(btn) {
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        const phone = "918778201109";
+
+        const text = `Hello Prabaharan,
+Name: ${name.value}
+Email: ${email.value}
+Message: ${message.value}`;
+
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+        window.open(url, "_blank");
+
+        const orig = btn.innerHTML;
+        btn.innerHTML = "<span>✓ Redirecting to WhatsApp...</span>";
+
+        // show toast
+        showToast("Message ready! WhatsApp opened.");
+
+        // clear inputs
+        name.value = "";
+        email.value = "";
+        message.value = "";
+
+        setTimeout(() => {
+          btn.innerHTML = orig;
+        }, 2000);
+      }
+
+      function showToast(msg) {
+        const toast = document.createElement("div");
+        toast.innerText = msg;
+        toast.className = "toast-msg";
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.classList.add("show");
+        }, 100);
+
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+      /* ===== SMOOTH SCROLL ===== */
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          if (!href || href === "#") return;
+          e.preventDefault();
+          const t = document.querySelector(href);
+          if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>
